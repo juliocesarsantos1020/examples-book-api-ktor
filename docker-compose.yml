@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    container_name: postgres-poc-ktor
+    restart: always
+    environment:
+      POSTGRES_DB: ktor
+      POSTGRES_PASSWORD: example
+    ports:
+      - "5432:5432"
